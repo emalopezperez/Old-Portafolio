@@ -23,7 +23,7 @@ const Contact = () => {
               </div>
               <div>
                 <h2 className="py-2  text-red-300">Carmma</h2>
-                <p>Desarrollo Web</p>
+                <p className="text-gray-600">Desarrollo Web</p>
                 <p className="py-4">
                   I am available for freelance or full-time positions. Contact
                   me and let&apos;s talk.
@@ -33,7 +33,7 @@ const Contact = () => {
                 <p className="uppercase pt-8">Contacta con nosotros</p>
                 <div className=" mt-6 flex items-center justify-between py-4">
                   <a
-                    href="https://www.linkedin.com/in/clint-briley-50056920a/"
+                    href=""
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -42,7 +42,7 @@ const Contact = () => {
                     </div>
                   </a>
                   <a
-                    href="https://github.com/fireclint"
+                    href=""
                     target="_blank"
                     rel="noreferrer"
                   >

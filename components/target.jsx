@@ -11,7 +11,7 @@ const Target = () => {
       <h2 className='py-4'>Elige tu plan</h2>
         <div className=' mt-10 grid  xl:grid-cols-3 grid-cols-1 gap-6 '>
         <div className=' h-auto w-full shadow-xl shadow-gray-400 rounded-xl group py-4 cursor-pointer p-4'>
-          <span>Paquete básico</span>
+          <span className='text-gray-600'>Paquete básico</span>
           <h2>Básico</h2>
           <div className='flex flex-col p-4'>
             <span>-Diseño OnePage</span>
@@ -20,11 +20,11 @@ const Target = () => {
             <span>-Soporte Básico</span>
           </div>
           <div className='flex justify-center mt-4'>
-              <button className=''>Elegir</button>
+              <button className='bg-red-300 p-1'>Elegir</button>
             </div>
         </div>
           <div className=' h-auto w-full shadow-xl shadow-gray-400 rounded-xl group p-4  cursor-pointer'>
-            <span>Autoadministrable</span>
+            <span className='text-gray-600'>Autoadministrable</span>
             <h2>Estandar</h2>
             <div className='flex flex-col p-4'>
               <span>-Diseño OnePage</span>
@@ -33,11 +33,11 @@ const Target = () => {
               <span>-Soporte Básico</span>
             </div>
             <div className='flex justify-center mt-4'>
-              <button className=''>Elegir</button>
+              <button className='bg-red-300 p-1'>Elegir</button>
             </div>
           </div>
-          <div className=' h-auto w-full shadow-xl bg-slate-400 shadow-gray-400 rounded-xl group p-4 cursor-pointer'>
-            <span>Empresarial</span>
+          <div className=' h-auto w-full shadow-xl  shadow-gray-400 rounded-xl group p-4 cursor-pointer'>
+            <span className="text-gray-600">Empresarial</span>
             <h2>Personalizado</h2>
             <div className='flex flex-col p-4'>
               <span>-Diseño OnePage</span>
@@ -47,7 +47,7 @@ const Target = () => {
             </div>
             
             <div className='flex justify-center mt-4'>
-              <button className=''>Elegir</button>
+              <button className='bg-red-300 p-1'>Elegir</button>
             </div>
             
           </div>
