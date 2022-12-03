@@ -44,22 +44,22 @@ const Nav = () => {
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/'>Home</Link>
+              <Link href='/#home'>Home</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/'>About</Link>
+              <Link href='/#about'>About</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/'>Skills</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/'>Projects</Link>
+              <Link href='/#projects'>Projects</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/'>Resume</Link>
+              <Link href='/#target'>Resume</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/'>Contact</Link>
+              <Link href='/#contact'>Contact</Link>
             </li>
           </ul>
           {/* Hamburger Icon */}
@@ -90,7 +90,7 @@ const Nav = () => {
         >
           <div>
             <div className='flex w-full items-center justify-between'>
-              <Link href='/'>
+              <Link href='/#home'>
                 
               <h1 className='text-red-300'>Carmma</h1>
                 
@@ -110,12 +110,12 @@ const Nav = () => {
           </div>
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
-              <Link href='/'>
+              <Link href='/#home'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   Home
                 </li>
               </Link>
-              <Link href='/'>
+              <Link href='/#about'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   About
                 </li>
@@ -125,17 +125,17 @@ const Nav = () => {
                   Skills
                 </li>
               </Link>
-              <Link href='/'>
+              <Link href='/#projects'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   Projects
                 </li>
               </Link>
-              <Link href='/'>
+              <Link href='/#target'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   Resume
                 </li>
               </Link>
-              <Link href='/'>
+              <Link href='/#contact'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   Contact
                 </li>
