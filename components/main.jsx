@@ -7,29 +7,23 @@ import Typewriter from 'typewriter-effect';
 
 const Main = () => {
   return (
-    <div id='home' className='w-full h-screen text-center pt-12'>
-      <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
+    <div id='home' className=' h-screen text-center mt-0 '>
+      <div className='max-w-[1240px]  h-full mx-auto p-2 flex justify-center items-center'>
         <div>
-          <p className='uppercase text-sm tracking-widest text-gray-600 mt-2'>
-            CONSTRUYAMOS jUNTOS
+          <p className='uppercase text-sm md:text-lg tracking-widest text-gray-600 pb-3'>
+            <Typewriter
+            options={{
+              strings: ['CONSTRUIMOS jUNTOS...'],
+              autoStart: true,
+              loop: true
+            }}
+          />
           </p>
-          <h1 className='py-2 text-gray-700'>
+          <h1 className='py-2 text-gray-700 text-3xl sm:text-5xl md:text-6xl '>
             Hola somos <span className='text-red-300'>Carmma</span>
           </h1>
-          <h1 className=' text-gray-700'>una empresa de desarrolo web, creamos tus
-            {""}
-          <p className='text-gray-800 py-3'>
-              <Typewriter
-                options={{
-                  strings: ["Paginas web", "Aplicaciones", "Tiendas onlinea", "Blogs "],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-          </p>
-          
-          </h1>
-          <p className='py-4 text-gray-600 sm:max-w-[70%] m-auto'>
+          <h1 className=' text-gray-700 text-3xl sm:text-5xl md:text-6xl '>tu empresa de desarrollo web</h1>
+          <p className='pt-6 text-gray-600 sm:max-w-[70%] m-auto  text-sm md:text-lg'>
             Nos enfocamos en crear sitios y aplicaciones web con diseño responsivo para que se adapte a los diferentes dispoitivos, garantizando la experiencia del usuario.
           </p>
           <div className='flex items-center justify-between max-w-[330px] m-auto py-9'>

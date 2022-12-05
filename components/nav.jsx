@@ -1,6 +1,4 @@
-import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
-import Logotipo from "../public/assets/logos/Logotipo.png";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
