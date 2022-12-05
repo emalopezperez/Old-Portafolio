@@ -50,9 +50,6 @@ const Nav = () => {
               <Link href='/#about'>About</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/'>Skills</Link>
-            </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#projects'>Projects</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
@@ -103,9 +100,9 @@ const Nav = () => {
               </div>
             </div>
             <div className='border-b border-gray-300 my-4'>
-              <p className='w-[85%] md:w-[90%] py-4'>
-                Carmma
-              </p>
+            <p className='uppercase text-sm tracking-widest text-gray-600'>
+            CONSTRUYAMOS jUNTOS
+          </p>
             </div>
           </div>
           <div className='py-4 flex flex-col'>
@@ -120,11 +117,7 @@ const Nav = () => {
                   About
                 </li>
               </Link>
-              <Link href='/'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Skills
-                </li>
-              </Link>
+
               <Link href='/#projects'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   Projects
@@ -141,13 +134,13 @@ const Nav = () => {
                 </li>
               </Link>
             </ul>
-            <div className='pt-40'>
-              <p className='uppercase tracking-widest text-[#5651e5]'>
+            <div className='pt-12'>
+              <p className='uppercase tracking-widest text-red-300'>
                 Let&#39;s Connect
               </p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                 <a
-                  href='https://www.linkedin.com/in/clint-briley-50056920a/'
+                  href=''
                   target='_blank'
                   rel='noreferrer'
                 >
@@ -156,7 +149,7 @@ const Nav = () => {
                   </div>
                 </a>
                 <a
-                  href='https://github.com/fireclint'
+                  href=''
                   target='_blank'
                   rel='noreferrer'
                 >
