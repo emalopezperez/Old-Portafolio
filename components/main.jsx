@@ -3,7 +3,7 @@ import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import Typed from "react-typed"
+import Typewriter from 'typewriter-effect';
 
 const Main = () => {
   return (
@@ -19,8 +19,12 @@ const Main = () => {
           <h1 className=' text-gray-700'>una empresa de desarrolo web, creamos tus
             {""}
           <p className='text-gray-800 py-3'>
-              <Typed strings={["Paginas web", "Aplicaciones", "Tiendas onlinea", "Blogs "]}
-              typeSpeed={90} backSpeed={100} loop
+              <Typewriter
+                options={{
+                  strings: ["Paginas web", "Aplicaciones", "Tiendas onlinea", "Blogs "],
+                  autoStart: true,
+                  loop: true,
+                }}
               />
           </p>
           
