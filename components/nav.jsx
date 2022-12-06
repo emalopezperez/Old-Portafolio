@@ -37,7 +37,7 @@ const Nav = () => {
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <Link href='/'>
           
-        <h1 className='text-red-300 text-4xl'>Carmma</h1>
+        <h1 className='text-red-300 text-5xl'>Carmma</h1>
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>

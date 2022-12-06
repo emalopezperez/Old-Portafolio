@@ -1,51 +1,121 @@
-import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import { db } from "../firebase/firebase";
+import { collection, addDoc } from "firebase/firestore";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [nombre, setNombre] = useState("");
+  const [number, setNumber] = useState("");
+  const [menssage, setMensagge] = useState("");
+  const [subject, setSubject] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (number.length < 6) {
+      toast.error("Numero no valido", {
+        style: {
+          border: "1px solid #713200",
+          padding: "16px",
+          color: "#713200",
+        },
+        iconTheme: {
+          primary: "#713200",
+          secondary: "#FFFAEE",
+        },
+      });
+
+      return;
+    }
+
+    if ([email, number, nombre, menssage, subject].includes("")) {
+      toast.error("Todos los campos son obligatorios", {
+        style: {
+          border: "1px solid #713200",
+          padding: "16px",
+          color: "#713200",
+        },
+        iconTheme: {
+          primary: "#713200",
+          secondary: "#FFFAEE",
+        },
+      });
+    } else {
+      const order = {
+        nombre,
+        email,
+        number,
+        subject,
+        menssage,
+      };
+
+      try {
+        const orderCollection = collection(db, "datos");
+        const consulta = addDoc(orderCollection, order);
+
+        toast.success("Mensaje enviado!", {
+          style: {
+            border: "1px solid #713200",
+            padding: "16px",
+            color: "#0B3B24",
+          },
+          iconTheme: {
+            primary: "#04640C",
+            secondary: "#FFFAEE",
+          },
+        });
+
+        setEmail("");
+        setMensagge("");
+        setNombre("");
+        setSubject("");
+        setNumber("");
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+    }
+  };
+
   return (
     <div id="contact" className="w-full lg:h-screen">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
+      <div className="max-w-[1200px] m-auto px-2 py-16 w-full ">
         <p className="text-xl tracking-widest uppercase text-red-300">
           Contacto
         </p>
-        <h2 className="py-4">Ponerse en contacto</h2>
+        <h2 className="py-4 text-3xl">PREGUNTAS Y SUGERENCIAS</h2>
         <div className="grid lg:grid-cols-5 gap-8">
           {/* left */}
           <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
             <div className="lg:p-4 h-full ">
-              <div>
-                
-              </div>
+              <div></div>
               <div>
                 <h2 className="py-2  text-red-300">Carmma</h2>
-                <p className="text-gray-600">Desarrollo Web</p>
                 <p className="py-4">
                   I am available for freelance or full-time positions. Contact
                   me and let&apos;s talk.
                 </p>
+                <p className="py-4">
+                  Desde ya, ¡muchas gracias! El equipo de{" "}
+                  <span className="text-red-300 cursor-pointer">Carmma</span>.
+                </p>
               </div>
               <div>
-                <p className="uppercase pt-8">Contacta con nosotros</p>
+                <p className="uppercase font-bold pt-8">
+                  OTROS MEDIOS de comunicacion:
+                </p>
                 <div className=" mt-6 flex items-center justify-between py-4">
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href="" target="_blank" rel="noreferrer">
                     <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaLinkedinIn />
                     </div>
                   </a>
-                  <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href="" target="_blank" rel="noreferrer">
                     <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaGithub />
                     </div>
@@ -67,16 +137,15 @@ const Contact = () => {
           {/* right */}
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-              <form
-                action="https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060"
-                method="POST"
-                encType="multipart/form-data"
-              >
+              {<Toaster position="top-right" reverseOrder={false} />}
+
+              <form onSubmit={handleSubmit} action="" method="" encType="">
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">Name</label>
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300"
+                      onChange={(e) => setNombre(e.target.value)}
                       type="text"
                       name="name"
                     />
@@ -86,6 +155,7 @@ const Contact = () => {
                       Phone Number
                     </label>
                     <input
+                      onChange={(e) => setNumber(e.target.value)}
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
                       name="phone"
@@ -95,6 +165,7 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Email</label>
                   <input
+                    onChange={(e) => setEmail(e.target.value)}
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="email"
                     name="email"
@@ -103,6 +174,7 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Subject</label>
                   <input
+                    onChange={(e) => setSubject(e.target.value)}
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
                     name="subject"
@@ -112,11 +184,15 @@ const Contact = () => {
                   <label className="uppercase text-sm py-2">Message</label>
                   <textarea
                     className="border-2 rounded-lg p-3 border-gray-300"
+                    onChange={(e) => setMensagge(e.target.value)}
                     rows="10"
                     name="message"
                   ></textarea>
                 </div>
-                <button className="w-full p-4 bg-red-300 text-gray-100 mt-4">
+                <button
+                  type="submit"
+                  className="w-full p-4 bg-red-300 text-gray-100 mt-4"
+                >
                   Send Message
                 </button>
               </form>

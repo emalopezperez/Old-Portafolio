@@ -7,8 +7,8 @@ import Projects from '../components/projects';
 import Contact from '../components/contact';
 import Target from "../components/target"
 
-
 export default function Home() {
+
   return (
     <div>
       <Head>
@@ -22,7 +22,6 @@ export default function Home() {
       <Nav/>
       <Main/>
       <About/>
-      
       <Projects/>
       <Target/>
       <Contact/>

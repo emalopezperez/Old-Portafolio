@@ -8,9 +8,9 @@ import Typewriter from 'typewriter-effect';
 const Main = () => {
   return (
     <div id='home' className=' h-screen text-center mt-0 '>
-      <div className='max-w-[1240px]  h-full mx-auto p-2 flex justify-center items-center'>
+      <div className='max-w-[1200px]  h-full mx-auto p-2 flex justify-center items-center'>
         <div>
-          <p className='uppercase text-sm md:text-lg tracking-widest text-gray-600 pb-3'>
+          <div className='uppercase text-sm tracking-widest text-gray-600 pb-3'>
             <Typewriter
             options={{
               strings: ['CONSTRUIMOS jUNTOS...'],
@@ -18,7 +18,7 @@ const Main = () => {
               loop: true
             }}
           />
-          </p>
+          </div>
           <h1 className='py-2 text-gray-700 text-3xl sm:text-5xl md:text-6xl '>
             Hola somos <span className='text-red-300'>Carmma</span>
           </h1>
