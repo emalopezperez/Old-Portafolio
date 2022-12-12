@@ -18,31 +18,15 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (number.length < 6) {
-      toast.error("Numero no valido", {
-        style: {
-          border: "1px solid #713200",
-          padding: "16px",
-          color: "#713200",
-        },
-        iconTheme: {
-          primary: "#713200",
-          secondary: "#FFFAEE",
-        },
-      });
-
-      return;
-    }
-
     if ([email, number, nombre, menssage, subject].includes("")) {
-      toast.error("Todos los campos son obligatorios", {
+      toast.error("Todos los campos son obligatorios!", {
         style: {
           border: "1px solid #713200",
           padding: "16px",
-          color: "#713200",
+          color: "#f48fb1",
         },
         iconTheme: {
-          primary: "#713200",
+          primary: "#660033 ",
           secondary: "#FFFAEE",
         },
       });
@@ -76,6 +60,7 @@ const Contact = () => {
         setNombre("");
         setSubject("");
         setNumber("");
+        
       } catch (e) {
         console.error("Error adding document: ", e);
       }
@@ -85,24 +70,23 @@ const Contact = () => {
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1200px] m-auto px-2 py-16 w-full ">
-        <p className="text-xl tracking-widest uppercase text-red-300">
+        <p className="uppercase text-2xl py-6 tracking-widest text-gray-700">
           Contacto
         </p>
-        <h2 className="py-4 text-3xl">PREGUNTAS Y SUGERENCIAS</h2>
         <div className="grid lg:grid-cols-5 gap-8">
           {/* left */}
           <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
             <div className="lg:p-4 h-full ">
               <div></div>
               <div>
-                <h2 className="py-2  text-red-300">Carmma</h2>
+                <h2 className="py-2  titulo-logo">Carmma</h2>
                 <p className="py-4">
                   I am available for freelance or full-time positions. Contact
                   me and let&apos;s talk.
                 </p>
                 <p className="py-4">
                   Desde ya, ¡muchas gracias! El equipo de{" "}
-                  <span className="text-red-300 cursor-pointer">Carmma</span>.
+                  <span className="titulo-logo cursor-pointer">Carmma</span>.
                 </p>
               </div>
               <div>
@@ -191,7 +175,7 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full p-4 bg-red-300 text-gray-100 mt-4"
+                  className="w-full p-4 boton text-gray-100 mt-4"
                 >
                   Send Message
                 </button>
@@ -202,7 +186,7 @@ const Contact = () => {
         <div className="flex justify-center py-12">
           <Link href="/#home">
             <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
-              <HiOutlineChevronDoubleUp className=" text-red-300" size={30} />
+              <HiOutlineChevronDoubleUp className=" titulo-logo" size={30} />
             </div>
           </Link>
         </div>

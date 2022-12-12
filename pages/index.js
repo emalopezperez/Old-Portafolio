@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Nav from '../components/nav';
 import Main from '../components/main';
 import About from '../components/about';
-import Skils from '../components/skils';
 import Projects from '../components/projects';
 import Contact from '../components/contact';
 import Target from "../components/target"
+
 
 export default function Home() {
 

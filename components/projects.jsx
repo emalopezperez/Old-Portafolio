@@ -10,10 +10,9 @@ const Projects = () => {
   return (
     <div id='projects' className='w-full'>
       <div className='max-w-[1200px] mx-auto px-2 py-16'>
-        <p className='text-xl m-4 tracking-widest uppercase text-red-300'>
+        <p className='uppercase text-2xl py-6 tracking-widest text-gray-700'>
           Projects
         </p>
-        <h2 className='py-4'>What I&apos;ve Built</h2>
         <div className='grid md:grid-cols-2 gap-8'>
         <ProjectItem
             title='Netflix App'

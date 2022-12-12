@@ -20,7 +20,7 @@ const Main = () => {
           />
           </div>
           <h1 className='py-2 text-gray-700 text-3xl sm:text-5xl md:text-6xl '>
-            Hola somos <span className='text-red-300'>Carmma</span>
+            Hola somos <span className='titulo-logo'>Carmma</span>
           </h1>
           <h1 className=' text-gray-700 text-3xl sm:text-5xl md:text-6xl '>tu empresa de desarrollo web</h1>
           <p className='pt-6 text-gray-600 sm:max-w-[70%] m-auto  text-sm md:text-lg'>

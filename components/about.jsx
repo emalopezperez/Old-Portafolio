@@ -1,33 +1,29 @@
-import Image from "next/image";
 import Link from "next/link";
-import about from "../public/assets/about/about.jpg";
+
 
 const About = () => {
   return (
-    <div id="about" className="w-full md:h-screen p-2 flex items-center">
+    <div id="about" className=" p-2 flex items-center">
       <div className="max-w-[1200px] m-auto md:grid grid-cols-1 ">
         <div className="col-span-2">
-          <p className="uppercase text-xl tracking-widest text-red-300">
+          <p className="uppercase text-2xl py-6 tracking-widest text-gray-700">
             Sobre Nosotros
           </p>
-          <h2 className="py-4">Who I Am</h2>
-          <p className="py-2 text-gray-600">
-            I specialize in building mobile responsive front-end UI applications
-            that connect with API’s and other backend technologies. I’m
-            passionate about learning new technologies and understand there is
-            more than one way to accomplish a task. Though I am most proficient
-            in building front-end applications using HTML, CSS, Javascript, and
-            React, I am a quick learner and can pick up new tech stacks as
-            needed. I believe that being a great developer is not using one
-            specific language, but choosing the best tool for the job.
+          <p className="py-2 text-black">
+          Somos una empresa enfocada en la solucion y desarrollo web
           </p>
           <p className="py-2 text-gray-600">
-            I started web developement in 2013 managing multiple e-commerce
-            websites on CMS platforms such as WordPress, BigCommerce, and
-            Shopify. I have experience working directly with clients and taking
-            mock wireframes all the way to deployed applications. In my spare
-            time I run Code Commerce, a Youtube channel where I teach web
-            developement and various front-end technologies.
+          Proporcionamos el mejoramiento de las empresas y la facilidad para los usuarios, mediante el desarrollo de aplicaciones Web que se ajustan perfectamente a la mayoría de las necesidades de comunicaciones e imagen de cada compañía en la búsqueda de aprovechar las oportunidades de Internet.
+
+          Para lograrlo se hace necesario que generemos una relación entre la visión de su empresa, lo que busca y la imagen proyectada, lo que permite especializar todos los servicios que el cliente pueda necesitar para materializar de la mejor manera sus proyectos Web; teniendo en cuenta que cada cliente es único contemplamos características especiales para lograr destacar los rasgos singulares de cada empresa en el mercado globalizado.
+          
+          En esta nueva era del Internet, todo individuo y toda compañía tiene la oportunidad de tener su propio sitio Web en el cual pueden:
+          
+          Aumentar la visibilidad de sus servicios / productos en el mundo entero.
+          
+          Sobresalir como líder en el sector por encima de la competencia, la disponibilidad comprende por ejemplo el acceso desde cualquier lugar geográfico y la garantía de operación continua.
+          
+          Mejorar el servicio al cliente, hacer seguimiento a la efectividad de su mercadeo.
           </p>
           <Link href="/#projects">
             <p className="py-2 text-gray-600 underline cursor-pointer">

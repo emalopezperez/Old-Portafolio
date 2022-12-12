@@ -9,6 +9,12 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
+.titulo-logo{
+  color: #f48fb1;
+}
+.boton{
+  background-color: #f48fb1;
+}
 @layer base {
   body {
     @apply bg-[#e4e7ea] text-[#1f2937] tracking-wide

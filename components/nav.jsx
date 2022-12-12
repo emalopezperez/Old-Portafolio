@@ -37,24 +37,24 @@ const Nav = () => {
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <Link href='/'>
           
-        <h1 className='text-red-300 text-5xl'>Carmma</h1>
+        <h1 class="hover:font-bold titulo-logo">Carmma</h1>
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#home'>Home</Link>
+              <Link href='/#home'>Inicio</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#about'>About</Link>
+              <Link href='/#about'>Sobre nosotros</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#projects'>Projects</Link>
+              <Link href='/#projects'>Proyectos</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#target'>Resume</Link>
+              <Link href='/#target'>Servicios</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#contact'>Contact</Link>
+              <Link href='/#contact'>Contacto</Link>
             </li>
           </ul>
           {/* Hamburger Icon */}
@@ -107,34 +107,34 @@ const Nav = () => {
             <ul className='uppercase'>
               <Link href='/#home'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Home
+                  Inicio
                 </li>
               </Link>
               <Link href='/#about'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  About
+                  Sobre nosotros
                 </li>
               </Link>
 
               <Link href='/#projects'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Projects
+                  Proyectos
                 </li>
               </Link>
               <Link href='/#target'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Resume
+                  Servicios
                 </li>
               </Link>
               <Link href='/#contact'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Contact
+                  Contacto
                 </li>
               </Link>
             </ul>
             <div className='pt-12'>
               <p className='uppercase tracking-widest text-red-300'>
-                Let&#39;s Connect
+                Conectemos
               </p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                 <a
