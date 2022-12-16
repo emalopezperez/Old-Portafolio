@@ -60,7 +60,6 @@ const Contact = () => {
         setNombre("");
         setSubject("");
         setNumber("");
-        
       } catch (e) {
         console.error("Error adding document: ", e);
       }
@@ -69,17 +68,17 @@ const Contact = () => {
 
   return (
     <div id="contact" className="w-full lg:h-screen">
-      <div className="max-w-[1200px] m-auto px-2 py-16 w-full ">
-        <p className="uppercase text-2xl py-6 tracking-widest text-gray-700">
+      <div className="max-w-[1200px] m-auto px-2 py-20 w-full ">
+        <p className="mb-5 font-poppins font-semibold  text-3xl sm:text-4xl md:text-5xl text-white ss:leading-[100.8px] leading-[75px">
           Contacto
         </p>
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="grid lg:grid-cols-5 gap-8 ">
           {/* left */}
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
+          <div className="bg-white col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-500 rounded-xl p-4">
             <div className="lg:p-4 h-full ">
               <div></div>
               <div>
-                <h2 className="py-2  titulo-logo">Carmma</h2>
+                <h2 className="py-2 text-gradient">Carmma</h2>
                 <p className="py-4">
                   I am available for freelance or full-time positions. Contact
                   me and let&apos;s talk.
@@ -95,21 +94,21 @@ const Contact = () => {
                 </p>
                 <div className=" mt-6 flex items-center justify-between py-4">
                   <a href="" target="_blank" rel="noreferrer">
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full boton shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaLinkedinIn />
                     </div>
                   </a>
                   <a href="" target="_blank" rel="noreferrer">
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full boton shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaGithub />
                     </div>
                   </a>
 
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <div className="rounded-full boton shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                     <AiOutlineMail />
                   </div>
                   <Link href="/">
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full boton shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <BsFillPersonLinesFill />
                     </div>
                   </Link>
@@ -119,7 +118,7 @@ const Contact = () => {
           </div>
 
           {/* right */}
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-500 rounded-xl lg:p-4 bg-white">
             <div className="p-4">
               {<Toaster position="top-right" reverseOrder={false} />}
 
@@ -175,9 +174,9 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full p-4 boton text-gray-100 mt-4"
+                  className="w-full p-4 boton  mt-4 text-black bg-blue-gradient rounded-[10px]"
                 >
-                  Send Message
+                  Enviar
                 </button>
               </form>
             </div>
@@ -185,8 +184,8 @@ const Contact = () => {
         </div>
         <div className="flex justify-center py-12">
           <Link href="/#home">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
-              <HiOutlineChevronDoubleUp className=" titulo-logo" size={30} />
+            <div className="rounded-full shadow-lg boton shadow-gray-500 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+              <HiOutlineChevronDoubleUp className="  text-black" size={30} />
             </div>
           </Link>
         </div>

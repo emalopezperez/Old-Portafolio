@@ -10,8 +10,8 @@ const Projects = () => {
   return (
     <div id='projects' className='w-full'>
       <div className='max-w-[1200px] mx-auto px-2 py-16'>
-        <p className='uppercase text-2xl py-6 tracking-widest text-gray-700'>
-          Projects
+        <p className=' py-6 font-poppins font-semibold  text-3xl sm:text-4xl md:text-5xl text-white ss:leading-[100.8px] leading-[75px'>
+          Projectos
         </p>
         <div className='grid md:grid-cols-2 gap-8'>
         <ProjectItem

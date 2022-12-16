@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -7,8 +7,8 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 const Nav = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState('#ecf0f3');
-  const [linkColor, setLinkColor] = useState('#1f2937');
+  const [navBg, setNavBg] = useState("#0b0f19");
+  const [linkColor, setLinkColor] = useState("#FFFFFF");
 
   const handleNav = () => {
     setNav(!nav);
@@ -22,7 +22,7 @@ const Nav = () => {
         setShadow(false);
       }
     };
-    window.addEventListener('scroll', handleShadow);
+    window.addEventListener("scroll", handleShadow);
   }, []);
 
   return (
@@ -30,38 +30,37 @@ const Nav = () => {
       style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
-          ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
-          : 'fixed w-full h-20 z-[100]'
+          ? "fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300"
+          : "fixed w-full h-20 z-[100]"
       }
     >
-      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-        <Link href='/'>
-          
-        <h1 class="hover:font-bold titulo-logo">Carmma</h1>
+      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+        <Link href="/">
+          <h1 class="hover:font-bold text-gradient">Carmma</h1>
         </Link>
         <div>
-          <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#home'>Inicio</Link>
+          <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
+            <li className="ml-10 font-poppins  text-sm uppercase hover:border-b">
+              <Link href="/#home">Inicio</Link>
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#about'>Sobre nosotros</Link>
+            <li className="ml-10 text-sm uppercase font-poppins  hover:border-b">
+              <Link href="/#about">Sobre nosotros</Link>
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#projects'>Proyectos</Link>
+            <li className="ml-10 text-sm uppercase hover:border-b font-poppins ">
+              <Link href="/#projects">Proyectos</Link>
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#target'>Servicios</Link>
+            <li className="ml-10 text-sm uppercase hover:border-b font-poppins ">
+              <Link href="/#target">Servicios</Link>
             </li>
-            <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/#contact'>Contacto</Link>
+            <li className="ml-10 text-sm uppercase hover:border-b font-poppins ">
+              <Link href="/#contact">Contacto</Link>
             </li>
           </ul>
           {/* Hamburger Icon */}
           <div
             style={{ color: `${linkColor}` }}
             onClick={handleNav}
-            className='md:hidden'
+            className="md:hidden"
           >
             <AiOutlineMenu size={25} />
           </div>
@@ -72,101 +71,91 @@ const Nav = () => {
       {/* Overlay */}
       <div
         className={
-          nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''
+          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-white" : ""
         }
       >
         {/* Side Drawer Menu */}
         <div
           className={
             nav
-              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
-              : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
+              ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen  p-10 ease-in duration-500"
+              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
           }
         >
           <div>
-            <div className='flex w-full items-center justify-between'>
-              <Link href='/#home'>
-                
-              <h1 className='text-red-300'>Carmma</h1>
-                
+            <div className="flex w-full items-center justify-between">
+              <Link href="/#home">
+                <h1 className="text-gradient">Carmma</h1>
               </Link>
               <div
                 onClick={handleNav}
-                className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'
+                className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
               >
                 <AiOutlineClose />
               </div>
             </div>
-            <div className='border-b border-gray-300 my-4'>
-            <p className='uppercase text-sm tracking-widest text-gray-600'>
-            CONSTRUYAMOS jUNTOS
-          </p>
+            <div className="border-b border-gray-300 my-4">
+              <p className="uppercase text-sm tracking-widest text-gray-600">
+                CONSTRUYAMOS jUNTOS
+              </p>
             </div>
           </div>
-          <div className='py-4 flex flex-col'>
-            <ul className='uppercase'>
-              <Link href='/#home'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+          <div className="py-4 flex flex-col">
+            <ul className="uppercase">
+              <Link href="/#home">
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Inicio
                 </li>
               </Link>
-              <Link href='/#about'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+              <Link href="/#about">
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Sobre nosotros
                 </li>
               </Link>
 
-              <Link href='/#projects'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+              <Link href="/#projects">
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Proyectos
                 </li>
               </Link>
-              <Link href='/#target'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+              <Link href="/#target">
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Servicios
                 </li>
               </Link>
-              <Link href='/#contact'>
-                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+              <Link href="/#contact">
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Contacto
                 </li>
               </Link>
             </ul>
-            <div className='pt-12'>
-              <p className='uppercase tracking-widest text-red-300'>
+            <div className="mt-12">
+              <p className="uppercase tracking-widest text-gradient">
                 Conectemos
               </p>
-              <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                <a
-                  href=''
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+              <div className="flex items-center justify-between py-6 my-4 w-full sm:w-[80%]">
+                <a href="" target="_blank" rel="noreferrer">
+                  <div className="boton rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <FaLinkedinIn />
                   </div>
                 </a>
-                <a
-                  href=''
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                <a href="" target="_blank" rel="noreferrer">
+                  <div className="boton rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <FaGithub />
                   </div>
                 </a>
-                <Link href='/'>
+                <Link href="/">
                   <div
                     onClick={() => setNav(!nav)}
-                    className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
+                    className="boton rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
                   >
                     <AiOutlineMail />
                   </div>
                 </Link>
-                <Link href='/'>
+                <Link href="/">
                   <div
                     onClick={() => setNav(!nav)}
-                    className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
+                    className="boton rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
                   >
                     <BsFillPersonLinesFill />
                   </div>
