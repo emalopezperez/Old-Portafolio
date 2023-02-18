@@ -1,171 +1,170 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { AiOutlineClose,  AiOutlineMenu } from "react-icons/ai";
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
-  const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState("#0b0f19");
-  const [linkColor, setLinkColor] = useState("#FFFFFF");
 
   const handleNav = () => {
     setNav(!nav);
   };
 
   useEffect(() => {
-    const handleShadow = () => {
-      if (window.scrollY >= 90) {
-        setShadow(true);
-      } else {
-        setShadow(false);
-      }
+    window.onscroll = function () {
+      scrollFunction();
     };
-    window.addEventListener("scroll", handleShadow);
   }, []);
 
-  return (
-    <div
-      style={{ backgroundColor: `${navBg}` }}
-      className={
-        shadow
-          ? "fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300"
-          : "fixed w-full h-20 z-[100]"
+  function scrollFunction() {
+    if (document.getElementById("navbar")) {
+      if (window.scrollY >= 10) {
+        document.getElementById("navbar").classList.add("shadow-navbar");
+        document.getElementById("navbar").classList.add("bg-[#01070c]");
+        document
+          .getElementById("title-color-mobil")
+          .classList.add("text-white");
+        document
+          .getElementById("title-color-boton")
+          .classList.add("text-white");
+      } else {
+        document.getElementById("navbar").classList.remove("shadow-navbar");
+        document.getElementById("navbar").classList.remove("bg-[#01070c]");
+        document
+          .getElementById("title-color-mobil")
+          .classList.remove("text-white");
+        document
+          .getElementById("title-color-boton")
+          .classList.remove("text-white");
       }
-    >
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Link href="/">
-          <h1 class="hover:font-bold text-gradient">Carmma</h1>
-        </Link>
-        <div>
-          <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
-            <li className="ml-10 font-poppins  text-sm uppercase hover:border-b">
-              <Link href="/#home">Inicio</Link>
-            </li>
-            <li className="ml-10 text-sm uppercase font-poppins  hover:border-b">
-              <Link href="/#about">Sobre nosotros</Link>
-            </li>
-            <li className="ml-10 text-sm uppercase hover:border-b font-poppins ">
-              <Link href="/#projects">Proyectos</Link>
-            </li>
-            <li className="ml-10 text-sm uppercase hover:border-b font-poppins ">
-              <Link href="/#target">Servicios</Link>
-            </li>
-            <li className="ml-10 text-sm uppercase hover:border-b font-poppins ">
-              <Link href="/#contact">Contacto</Link>
-            </li>
-          </ul>
-          {/* Hamburger Icon */}
-          <div
-            style={{ color: `${linkColor}` }}
-            onClick={handleNav}
-            className="md:hidden"
-          >
-            <AiOutlineMenu size={25} />
+    }
+  }
+
+  return (
+    <nav
+      id="navbar"
+      data-scroll
+      data-scroll-id="hey"
+      className="fixed top-0 z-40 w-full px-20 py-4 transition duration-300 ease-in-out shadow-navbar ">
+
+      <div className="px-4 sm:px-6">
+        <div className="flex-wrap items-center justify-between hidden px-2 -mt-2 -ml-4 lg:flex sm:flex-nowrap md:px-14">
+          <div>
+            <Link
+              id="title-color"
+              href="/"
+              className="inline-flex mx-4 mt-2 text-2xl font-bold leading-6 text-red-300 transition duration-300 ease-in-out hover:border-white-900 ">
+              Portafolio
+            </Link>
+          </div>
+          <Link href="/" className="mt-2 ml-4"></Link>
+          <div id="text-color" className="flex-shrink-0 mt-2 ml-4 text-red-200">
+            <Link
+              href="/"
+              className="inline-flex mx-4 font-semibold transition duration-300 ease-in-out eading-6 hover:text-white">
+              Inicio
+            </Link>
+            <Link
+              href="/"
+              className="inline-flex mx-4 font-semibold transition duration-300 ease-in-out eading-6 hover:text-white">
+              Proyectos
+            </Link>
+            <Link
+              href="/mi"
+              className="inline-flex mx-4 text-sm font-semibold transition duration-300 ease-in-out eading-6 hover:text-white">
+              Sobre mi
+            </Link>
+            <Link
+              href="/blog"
+              className="inline-flex mx-4 text-sm font-semibold transition duration-300 ease-in-out eading-6 hover:text-white">
+              Skills
+            </Link>
+
+            <Link
+              href="/nosotros"
+              className="inline-flex mx-4 text-sm font-semibold transition duration-300 ease-in-out eading-6 hover:text-white">
+              Contacto
+            </Link>
+
           </div>
         </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {/* Overlay */}
-      <div
-        className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-white" : ""
-        }
-      >
-        {/* Side Drawer Menu */}
         <div
           className={
             nav
-              ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen  p-10 ease-in duration-500"
-              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
-          }
-        >
-          <div>
-            <div className="flex w-full items-center justify-between">
-              <Link href="/#home">
-                <h1 className="text-gradient">Carmma</h1>
+              ? "md:hidden fixed left-0 top-0 w-full h-screen bg-[#01070c]"
+              : ""
+          }>
+          {/* Side Drawer Menu */ }
+          <div
+            className={
+              nav
+                ? " fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen  p-10 ease-in duration-500"
+                : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+            }>
+            <div className="flex items-center w-full gap-20 ">
+              <Link href="/">
+                <h1 className="text-3xl text-red-200">Portafolio</h1>
               </Link>
               <div
-                onClick={handleNav}
-                className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
-              >
+                onClick={ handleNav }
+                className="p-3 bg-white rounded-full shadow-lg cursor-pointer shadow-gray-400">
                 <AiOutlineClose />
               </div>
             </div>
-            <div className="border-b border-gray-300 my-4">
-              <p className="uppercase text-sm tracking-widest text-gray-600">
-                CONSTRUYAMOS jUNTOS
+            <div className="pt-4 border-b border-gray-300">
+              <p className="text-[9px] tracking-widest text-white uppercase">
+                Construyamos juntos
               </p>
             </div>
-          </div>
-          <div className="py-4 flex flex-col">
-            <ul className="uppercase">
-              <Link href="/#home">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Inicio
-                </li>
-              </Link>
-              <Link href="/#about">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Sobre nosotros
-                </li>
-              </Link>
-
-              <Link href="/#projects">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Proyectos
-                </li>
-              </Link>
-              <Link href="/#target">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Servicios
-                </li>
-              </Link>
-              <Link href="/#contact">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Contacto
-                </li>
-              </Link>
-            </ul>
-            <div className="mt-12">
-              <p className="uppercase tracking-widest text-gradient">
-                Conectemos
-              </p>
-              <div className="flex items-center justify-between py-6 my-4 w-full sm:w-[80%]">
-                <a href="" target="_blank" rel="noreferrer">
-                  <div className="boton rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <FaLinkedinIn />
-                  </div>
-                </a>
-                <a href="" target="_blank" rel="noreferrer">
-                  <div className="boton rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <FaGithub />
-                  </div>
-                </a>
+            <div className="flex flex-col py-4 pt-12 text-white">
+              <ul className="uppercase">
                 <Link href="/">
-                  <div
-                    onClick={() => setNav(!nav)}
-                    className="boton rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
-                  >
-                    <AiOutlineMail />
-                  </div>
+                  <li onClick={ () => setNav(false) } className="py-2 text-sm">
+                    Inicio
+                  </li>
                 </Link>
                 <Link href="/">
-                  <div
-                    onClick={() => setNav(!nav)}
-                    className="boton rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
-                  >
-                    <BsFillPersonLinesFill />
-                  </div>
+                  <li onClick={ () => setNav(false) } className="py-2 text-sm">
+                    Proyectos
+                  </li>
                 </Link>
-              </div>
+                <Link href="/">
+                  <li onClick={ () => setNav(false) } className="py-2 text-sm">
+                    Skills
+                  </li>
+                </Link>
+                <Link href="/nosotros">
+                  <li onClick={ () => setNav(false) } className="py-2 text-sm">
+                    Sobre mi
+                  </li>
+                </Link>
+                <Link href="/nosotros">
+                  <li onClick={ () => setNav(false) } className="py-2 text-sm">
+                    Contacto
+                  </li>
+                </Link>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="flex justify-between text-black aling-center lg:hidden sm:flex-nowrap">
+        <div id="title-color-mobil" className="">
+          <Link href="/" className="">
+            <h1 className="text-[20px] md:text-2xl ">Portafolio</h1>
+          </Link>
+        </div>
+        <button
+          id="title-color-boton"
+          onClick={ handleNav }
+          className="cursor-pointer md:hidden ">
+          <AiOutlineMenu size={ 20 } />
+        </button>
+      </div>
+
+
+
+    </nav>
   );
 };
 

@@ -4,15 +4,13 @@ import Main from '../components/main';
 import About from '../components/about';
 import Projects from '../components/projects';
 import Contact from '../components/contact';
-import Target from "../components/target"
 import Skils from "../components/skils"
 
 export default function Home() {
-
   return (
     <div>
       <Head>
-        <title>Carmma</title>
+        <title>Portafolio Emanuel Lopez</title>
         <meta
           name="description"
           content="I’m a front-end web developer specializing in building exceptional digital experiences."
@@ -20,10 +18,11 @@ export default function Home() {
         <link rel="icon" href="/fav.png" />
       </Head>
       <Nav/>
+      <div className='mt-[26px]'>
       <Main/>
+      </div>
       <About/>
       <Projects/>
-      <Target/>
       <Skils/>
       <Contact/>
     </div>
