@@ -110,10 +110,7 @@ const Contact = () => {
                     I am available for freelance or full-time positions. Contact
                     me and let&apos;s talk.
                   </p>
-                  <p className="py-4 text-white">
-                    Desde ya, ¡muchas gracias! El equipo de{ " " }
-                    <span className="text-red-300 cursor-pointer">Carmma</span>.
-                  </p>
+                  
                 </div>
                 <div>
                   <p className="pt-8 font-bold text-white uppercase">

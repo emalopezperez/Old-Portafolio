@@ -45,7 +45,6 @@ const Nav = () => {
       data-scroll
       data-scroll-id="hey"
       className="fixed top-0 z-40 w-full px-20 py-4 transition duration-300 ease-in-out shadow-navbar ">
-
       <div className="px-4 sm:px-6">
         <div className="flex-wrap items-center justify-between hidden px-2 -mt-2 -ml-4 lg:flex sm:flex-nowrap md:px-14">
           <div>
@@ -57,7 +56,7 @@ const Nav = () => {
             </Link>
           </div>
 
-          <div id="text-color" className="flex-shrink-0 mt-2 ml-4 text-red-200">
+          <div id="text-color" className="flex-shrink-0 mt-2 ml-4 text-sm text-red-200 uppercase">
             <Link
               href="/"
               className="inline-flex mx-4 font-semibold transition duration-300 ease-in-out eading-6 hover:text-white">
