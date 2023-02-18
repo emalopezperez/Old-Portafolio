@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { AiOutlineClose,  AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
@@ -56,7 +56,7 @@ const Nav = () => {
               Portafolio
             </Link>
           </div>
-          <Link href="/" className="mt-2 ml-4"></Link>
+
           <div id="text-color" className="flex-shrink-0 mt-2 ml-4 text-red-200">
             <Link
               href="/"
@@ -64,23 +64,22 @@ const Nav = () => {
               Inicio
             </Link>
             <Link
-              href="/"
+              href="/#projects"
               className="inline-flex mx-4 font-semibold transition duration-300 ease-in-out eading-6 hover:text-white">
               Proyectos
             </Link>
             <Link
-              href="/mi"
+              href="/#about"
               className="inline-flex mx-4 text-sm font-semibold transition duration-300 ease-in-out eading-6 hover:text-white">
               Sobre mi
             </Link>
             <Link
-              href="/blog"
+              href="/#skills"
               className="inline-flex mx-4 text-sm font-semibold transition duration-300 ease-in-out eading-6 hover:text-white">
               Skills
             </Link>
-
             <Link
-              href="/nosotros"
+              href="/#contact"
               className="inline-flex mx-4 text-sm font-semibold transition duration-300 ease-in-out eading-6 hover:text-white">
               Contacto
             </Link>
@@ -122,22 +121,22 @@ const Nav = () => {
                     Inicio
                   </li>
                 </Link>
-                <Link href="/">
+                <Link href="/#projects">
                   <li onClick={ () => setNav(false) } className="py-2 text-sm">
                     Proyectos
                   </li>
                 </Link>
-                <Link href="/">
+                <Link href="/#skills">
                   <li onClick={ () => setNav(false) } className="py-2 text-sm">
                     Skills
                   </li>
                 </Link>
-                <Link href="/nosotros">
+                <Link href="/#about">
                   <li onClick={ () => setNav(false) } className="py-2 text-sm">
                     Sobre mi
                   </li>
                 </Link>
-                <Link href="/nosotros">
+                <Link href="/#contact">
                   <li onClick={ () => setNav(false) } className="py-2 text-sm">
                     Contacto
                   </li>
@@ -160,10 +159,8 @@ const Nav = () => {
           className="cursor-pointer md:hidden ">
           <AiOutlineMenu size={ 20 } />
         </button>
+
       </div>
-
-
-
     </nav>
   );
 };

@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
-
     <div id='projects' className='w-full '>
       <div className='max-w-[1200px] mx-4 md:mx-auto px-2 py-16'>
         <motion.div

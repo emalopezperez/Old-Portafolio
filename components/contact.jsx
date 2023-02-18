@@ -85,6 +85,7 @@ const Contact = () => {
 
   return (
     <motion.div
+      id="contact"
       className=""
       initial="hidden"
       whileInView="visible"
@@ -95,8 +96,7 @@ const Contact = () => {
         visible: { opacity: 1, y: 0 },
       } }
     >
-      <div id="contact" className="w-full lg:h-screen">
-
+      <div  className="w-full lg:h-screen">
         <div className="max-w-[1200px] m-auto px-2 py-16 w-full ">
           <h2 className="py-4 font-poppins font-semibold  text-3xl sm:text-4xl md:text-5xl text-red-300 ss:leading-[100.8px] leading-[75px] mb-4">Contacto</h2>
           <div className="grid gap-8 lg:grid-cols-5">
@@ -210,7 +210,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex justify-center py-12">
-            <Link href="/#home">
+            <Link href="/">
               <div className="p-4 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110">
                 <HiOutlineChevronDoubleUp className="text-red-200" size={ 30 } />
               </div>
