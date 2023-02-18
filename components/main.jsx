@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { AiOutlineMail } from 'react-icons/ai';
+import { AiOutlineMail} from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import Typewriter from 'typewriter-effect';
@@ -77,7 +77,9 @@ const Main = () => {
               <Link href='/resume'>
                 <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110'>
                   <BsFillPersonLinesFill size={ 22 } className="text-red-200" />
+                  
                 </div>
+                
               </Link>
             </div>
             </motion.div>
