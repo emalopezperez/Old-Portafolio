@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const ProjectItem = ({ title, backgroundImg, tech, projectUrl }) => {
+const ProjectItem = ({ title, backgroundImg, tech, projectUrl}) => {
   useEffect(() => {
     AOS.init();
   }, []);

@@ -96,7 +96,7 @@ const Contact = () => {
         visible: { opacity: 1, y: 0 },
       } }
     >
-      <div  className="w-full lg:h-screen">
+      <div className="w-full lg:h-screen">
         <div className="max-w-[1200px] m-auto px-2 py-16 w-full ">
           <h2 className="py-4 font-poppins font-semibold  text-3xl sm:text-4xl md:text-5xl text-red-300 ss:leading-[100.8px] leading-[75px] mb-4">Contacto</h2>
           <div className="grid gap-8 lg:grid-cols-5">
@@ -110,7 +110,7 @@ const Contact = () => {
                     I am available for freelance or full-time positions. Contact
                     me and let&apos;s talk.
                   </p>
-                  
+
                 </div>
                 <div>
                   <p className="pt-8 font-bold text-white uppercase">
@@ -206,13 +206,25 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center py-12">
-            <Link href="/">
-              <div className="p-4 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110">
-                <HiOutlineChevronDoubleUp className="text-red-200" size={ 30 } />
-              </div>
-            </Link>
-          </div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={ { once: true, amount: 0.5 } }
+            transition={ { delay: 0.5, duration: 0.5 } }
+            variants={ {
+              hidden: { opacity: 0, y: -100 },
+              visible: { opacity: 1, y: 0 },
+            } }
+          >
+            <div className="flex justify-center py-12">
+              <Link href="/">
+                <div className="p-4 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110">
+                  <HiOutlineChevronDoubleUp className="text-red-200" size={ 30 } />
+                </div>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </div>
     </motion.div>

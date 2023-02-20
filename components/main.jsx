@@ -65,7 +65,7 @@ const Main = () => {
                 target='_blank'
                 rel='noreferrer'
               >
-                <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 '>
+                <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110'>
                   <FaGithub size={ 22 } className="text-red-200" />
                 </div>
               </a>
@@ -77,9 +77,7 @@ const Main = () => {
               <Link href='/resume'>
                 <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110'>
                   <BsFillPersonLinesFill size={ 22 } className="text-red-200" />
-                  
                 </div>
-                
               </Link>
             </div>
             </motion.div>
