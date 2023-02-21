@@ -5,18 +5,6 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <motion.div
-      id="about"
-      className=""
-      initial="hidden"
-      whileInView="visible"
-      viewport={ { once: true, amount: 0.5 } }
-      transition={ { delay: 0.8, duration: 0.5 } }
-      variants={ {
-        hidden: { opacity: 0, y: -100 },
-        visible: { opacity: 1, y: 0 },
-      } }
-    >
       <div className="flex items-center w-full p-2 py-16 mx-4 md:mx-auto">
         <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
           <div className="col-span-2">
@@ -35,7 +23,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </motion.div>
   );
 };
 

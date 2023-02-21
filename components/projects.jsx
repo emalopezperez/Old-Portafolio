@@ -10,7 +10,7 @@ import ProjectItem from './projectItem';
 import { motion } from 'framer-motion';
 
 const Projects = () => {
-const [activity, setActivity] = useState(false)
+  const [activity, setActivity] = useState(false)
 
   function onSubmit() {
     setActivity(!activity)
@@ -18,30 +18,19 @@ const [activity, setActivity] = useState(false)
   return (
     <div id='projects' className='w-full '>
       <div className='max-w-[1200px] mx-4 md:mx-auto px-2 py-16'>
-        <motion.div
-          className=""
-          initial="hidden"
-          whileInView="visible"
-          viewport={ { once: true, amount: 0.5 } }
-          transition={ { delay: 1, duration: 0.5 } }
-          variants={ {
-            hidden: { opacity: 0, y: -100 },
-            visible: { opacity: 1, y: 0 },
-          } }
-        >
-          <p className='pb-10 py-6 font-poppins font-semibold  text-3xl sm:text-4xl md:text-5xl text-red-300 ss:leading-[100.8px] leading-[75px'>
-            Projectos
-          </p>
-        </motion.div>
+        <p className='pb-10 py-6 font-poppins font-semibold  text-3xl sm:text-4xl md:text-5xl text-red-300 ss:leading-[100.8px] leading-[75px'>
+          Projectos
+        </p>
+
         <div className='grid gap-8 md:grid-cols-2'>
           <motion.div
             className=""
             initial="hidden"
             whileInView="visible"
             viewport={ { once: true, amount: 0.5 } }
-            transition={ { delay: 1, duration: 0.5 } }
+            transition={ { delay: 0.2, duration: 0.5 } }
             variants={ {
-              hidden: { opacity: 0, y: -100 },
+              hidden: { opacity: 0, y: -50 },
               visible: { opacity: 1, y: 0 },
             } }
           >
@@ -57,9 +46,9 @@ const [activity, setActivity] = useState(false)
             initial="hidden"
             whileInView="visible"
             viewport={ { once: true, amount: 0.5 } }
-            transition={ { delay: 1, duration: 0.5 } }
+            transition={ { delay: 0.2, duration: 0.5 } }
             variants={ {
-              hidden: { opacity: 0, y: -100 },
+              hidden: { opacity: 0, y: -50 },
               visible: { opacity: 1, y: 0 },
             } }
           >
@@ -112,7 +101,7 @@ const [activity, setActivity] = useState(false)
             activity ? <>
               <ProjectItem
                 title='E-commerce Informatica'
-                backgroundImg={ informatica}
+                backgroundImg={ informatica }
                 projectUrl='/proyects/informatica'
                 tech='React.js'
               />
