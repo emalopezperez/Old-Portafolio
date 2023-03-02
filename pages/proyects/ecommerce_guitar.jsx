@@ -13,7 +13,7 @@ const Ecommerce = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src={propertyImg}
+          src={ propertyImg }
           alt='/'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
@@ -24,27 +24,23 @@ const Ecommerce = () => {
 
       <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8 text-white'>
         <div className='col-span-4'>
-          <p>Project</p>
-          <h2>Overview</h2>
+          <h2 className='py-4'>Project</h2>
           <p>
-            This app was built using React JS and is hosted on Firebase. Users
-            are able to search properties based on an Address, City, or ZIP code
-            to retrieve a list of active properties currently for sale. You will
-            be able to view property information as well as the specific
-            location of the property integrated with the Google Maps API. User
-            authentication is available so you can signup and signin to your
-            account with an email address in order to save your favorite
-            properties. This is made possible with Zillow API.
+            Esta es una aplicación web creada con Next.js, Tailwind CSS y Strapi para permitir a los usuarios comprar guitarras y leer noticias sobre instrumentos musicales en un blog integrado. La aplicación cuenta con un enfoque orientado al SEO, ya que utiliza Server-side Rendering para generar las páginas web y asegurar que sean fáciles de indexar por los motores de búsqueda.
+
+            <h2 className='py-4'>Funcionalidades</h2>
+
+            La aplicación ofrece diversas funcionalidades para brindar una experiencia completa al usuario. Algunas de estas funcionalidades incluyen la posibilidad de registrarse y autenticarse para acceder a las opciones de compra, la visualización de guitarras disponibles en la tienda y la selección de las mismas para agregarlas al carrito de compras. Además, la aplicación permite realizar el pago de las guitarras seleccionadas y recibir una confirmación del pedido, junto con la información necesaria para el envío. Por último, la aplicación cuenta con un blog de noticias sobre instrumentos musicales que brinda información valiosa y actualizada sobre el mundo de la música.
           </p>
           <a
-            href=''
+            href='https://github.com/emalopezperez/tienda-virtual-guitarras-next.js'
             target=''
             rel='noreferrer'
           >
             <button className='px-8 py-2 mt-4 mr-8'>Code</button>
           </a>
           <a
-            href=''
+            href='https://tienda-virtual-guitarras-next-bqecfpmmc-emalopezperez.vercel.app/'
             target='_blank'
             rel='noreferrer'
           >
@@ -56,7 +52,7 @@ const Ecommerce = () => {
             <p className='pb-2 font-bold text-center'>Technologies</p>
             <div className='grid grid-cols-3 md:grid-cols-1'>
               <p className='flex items-center py-2 text-gray-600'>
-                <RiRadioButtonFill className='pr-1' /> React
+                <RiRadioButtonFill className='pr-1' /> Next js
               </p>
               <p className='flex items-center py-2 text-gray-600'>
                 <RiRadioButtonFill className='pr-1' /> Tailwind
@@ -65,13 +61,7 @@ const Ecommerce = () => {
                 <RiRadioButtonFill className='pr-1' /> Javascript
               </p>
               <p className='flex items-center py-2 text-gray-600'>
-                <RiRadioButtonFill className='pr-1' /> Firebase
-              </p>
-              <p className='flex items-center py-2 text-gray-600'>
-                <RiRadioButtonFill className='pr-1' /> Google API
-              </p>
-              <p className='flex items-center py-2 text-gray-600'>
-                <RiRadioButtonFill className='pr-1' /> Zillow API
+                <RiRadioButtonFill className='pr-1' /> Strapi
               </p>
             </div>
           </div>

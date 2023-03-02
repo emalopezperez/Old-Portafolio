@@ -13,7 +13,7 @@ const Informatica = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src={propertyImg}
+          src={ propertyImg }
           alt='/'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
@@ -24,27 +24,22 @@ const Informatica = () => {
 
       <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8 text-white'>
         <div className='col-span-4'>
-          <p>Project</p>
-          <h2>Overview</h2>
+          <h2 className='py-4'>Projecto</h2>
           <p>
-            This app was built using React JS and is hosted on Firebase. Users
-            are able to search properties based on an Address, City, or ZIP code
-            to retrieve a list of active properties currently for sale. You will
-            be able to view property information as well as the specific
-            location of the property integrated with the Google Maps API. User
-            authentication is available so you can signup and signin to your
-            account with an email address in order to save your favorite
-            properties. This is made possible with Zillow API.
-          </p>
+            Este proyecto es un sitio de E-commerce desarrollado por Emanuel Lopez como parte del curso React / Coderhouse. El sitio está construido con React JS y algunas librerías y frameworks complementarios, incluyendo Node.js, TailwindCSS, Firebase, react-hot-toast y react-router-dom.
+
+            El sitio cuenta con varias características, como una barra de navegación con enlaces por categoría y un carrito de compras, que utiliza React Router para navegar entre páginas. El carrito de compras almacena los productos aunque el usuario salga del sitio o recargue la página gracias al almacenamiento local.
+
+            El sitio también permite ver los detalles de los productos, filtrar vistas por categoría y listar todos los artículos disponibles en la página principal. Además, cuenta con un formulario de contacto para que los clientes puedan dejar sus dudas e inquietudes y el dueño del sitio pueda acceder a ellas mediante Firebase y resolver las dudas o ponerse en contacto con ellos.</p>
           <a
-            href=''
+            href='https://github.com/emalopezperez/Tienda-Online-Informatica'
             target=''
             rel='noreferrer'
           >
             <button className='px-8 py-2 mt-4 mr-8'>Code</button>
           </a>
           <a
-            href=''
+            href='https://heling-emalopezperez.vercel.app/'
             target='_blank'
             rel='noreferrer'
           >
@@ -68,10 +63,10 @@ const Informatica = () => {
                 <RiRadioButtonFill className='pr-1' /> Firebase
               </p>
               <p className='flex items-center py-2 text-gray-600'>
-                <RiRadioButtonFill className='pr-1' /> Google API
+                <RiRadioButtonFill className='pr-1' /> Node js
               </p>
               <p className='flex items-center py-2 text-gray-600'>
-                <RiRadioButtonFill className='pr-1' /> Zillow API
+                <RiRadioButtonFill className='pr-1' /> react-router-dom
               </p>
             </div>
           </div>

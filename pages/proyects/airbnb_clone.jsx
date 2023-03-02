@@ -24,32 +24,18 @@ const Airbnb = () => {
 
       <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8 text-white'>
         <div className='col-span-4'>
-          <p>Project</p>
-          <h2>Overview</h2>
+          <h2 className='py-4'>Projecto</h2>
           <p>
-            This app was built using React JS and is hosted on Firebase. Users
-            are able to search properties based on an Address, City, or ZIP code
-            to retrieve a list of active properties currently for sale. You will
-            be able to view property information as well as the specific
-            location of the property integrated with the Google Maps API. User
-            authentication is available so you can signup and signin to your
-            account with an email address in order to save your favorite
-            properties. This is made possible with Zillow API.
+            Este proyecto es un clon de la interfaz de usuario de Airbnb construido con Next.js, Tailwind CSS y Sanity. El objetivo es demostrar cómo puedes utilizar estas tecnologías para construir una aplicación web moderna y escalable con una interfaz de usuario atractiva, consumiendo los datos y funcionalidades del backend de Sanity. Con esta aplicación, podrás explorar cómo integrar una base de datos de Sanity en tu proyecto, crear modelos de datos personalizados y utilizar los datos de forma dinámica en tu interfaz de usuario.
           </p>
           <a
-            href=''
+            href='https://github.com/emalopezperez/frontend-clone-AirBnb'
             target=''
             rel='noreferrer'
           >
             <button className='px-8 py-2 mt-4 mr-8'>Code</button>
           </a>
-          <a
-            href=''
-            target='_blank'
-            rel='noreferrer'
-          >
-            <button className='px-8 py-2 mt-4'>Demo</button>
-          </a>
+
         </div>
         <div className='col-span-4 py-4 shadow-xl md:col-span-1 shadow-gray-400 rounded-xl'>
           <div className='p-2'>
@@ -65,14 +51,10 @@ const Airbnb = () => {
                 <RiRadioButtonFill className='pr-1' /> Javascript
               </p>
               <p className='flex items-center py-2 text-gray-600'>
-                <RiRadioButtonFill className='pr-1' /> Firebase
+                <RiRadioButtonFill className='pr-1' /> Sanity
               </p>
-              <p className='flex items-center py-2 text-gray-600'>
-                <RiRadioButtonFill className='pr-1' /> Google API
-              </p>
-              <p className='flex items-center py-2 text-gray-600'>
-                <RiRadioButtonFill className='pr-1' /> Zillow API
-              </p>
+
+
             </div>
           </div>
         </div>

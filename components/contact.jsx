@@ -1,5 +1,9 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import Router from 'next/router';
+import useValidacion from "../hooks/useValidation";
+import validarContact from '../validation/ValidationCantact'
+import Error from "../components/errors/Error";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -10,78 +14,50 @@ import toast, { Toaster } from "react-hot-toast";
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  const [email, setEmail] = useState("");
-  const [nombre, setNombre] = useState("");
-  const [number, setNumber] = useState("");
-  const [menssage, setMensagge] = useState("");
-  const [subject, setSubject] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const STATE_INICIAL = {
+    nombre: '',
+    email: '',
+    numero: '',
+    asunto: "",
+    mensaje: ""
+  }
 
-    if (number.length < 6) {
-      toast.error("Numero no valido", {
-        style: {
-          border: "1px solid #713200",
-          padding: "16px",
-          color: "#713200",
-        },
-        iconTheme: {
-          primary: "#713200",
-          secondary: "#FFFAEE",
-        },
-      });
+  const [error, guardarError] = useState(false);
 
-      return;
-    }
+  const { valores, errores, handleSubmit, handleChange, handleBlur, resetearFormulario } = useValidacion(STATE_INICIAL, validarContact, handleRegistroSubmit);
 
-    if ([email, number, nombre, menssage, subject].includes("")) {
-      toast.error("Todos los campos son obligatorios", {
-        style: {
-          border: "1px solid #713200",
-          padding: "16px",
-          color: "#713200",
-        },
-        iconTheme: {
-          primary: "#713200",
-          secondary: "#FFFAEE",
-        },
-      });
-    } else {
+  const { nombre, email, numero, mensaje, asunto } = valores;
+
+  async function handleRegistroSubmit() {
+    try {
       const order = {
         nombre,
         email,
-        number,
-        subject,
-        menssage,
+        numero,
+        asunto,
+        mensaje,
       };
 
-      try {
-        const orderCollection = collection(db, "datos");
-        const consulta = addDoc(orderCollection, order);
+      const orderCollection = collection(db, "datos");
+      const consulta = addDoc(orderCollection, order);
 
-        toast.success("Mensaje enviado!", {
-          style: {
-            border: "1px solid #713200",
-            padding: "16px",
-            color: "#0B3B24",
-          },
-          iconTheme: {
-            primary: "#04640C",
-            secondary: "#FFFAEE",
-          },
-        });
-
-        setEmail("");
-        setMensagge("");
-        setNombre("");
-        setSubject("");
-        setNumber("");
-      } catch (e) {
-        console.error("Error adding document: ", e);
-      }
+      toast.success("Mensaje enviado!", {
+        style: {
+          border: "1px solid #713200",
+          padding: "16px",
+          color: "#0B3B24",
+        },
+        iconTheme: {
+          primary: "#04640C",
+          secondary: "#FFFAEE",
+        },
+      });
+      Router.push('/');
+    } catch (error) {
+      console.error("Error adding document: ", error);
     }
-  };
+  }
 
   return (
     <motion.div
@@ -145,56 +121,80 @@ const Contact = () => {
             <div className="w-full h-auto col-span-3 mx-auto text-white shadow-md shadow-white rounded-xl lg:p-4">
               <div className="p-4">
                 { <Toaster position="top-right" reverseOrder={ false } /> }
-
-                <form onSubmit={ handleSubmit } action="" method="" encType="">
-                  <div className="grid w-full gap-4 py-2 text-white md:grid-cols-2">
+                <form
+                  onSubmit={ handleSubmit }
+                  noValidate action=""
+                  method="" encType="">
+                  <div className="grid w-full gap-4 py-2 md:grid-cols-2">
                     <div className="flex flex-col">
                       <label className="py-2 text-sm uppercase">Name</label>
                       <input
-                        className="flex p-3 border-2 border-gray-300 rounded-lg"
-                        onChange={ (e) => setNombre(e.target.value) }
+                        className={ errores.nombre ? "flex p-3 text-black border-2 border-gray-300 rounded-lg border-b-red-700 outline-none" : " outline-none flex p-3 text-black border-2 border-gray-300 rounded-lg " }
                         type="text"
-                        name="name"
+                        id="nombre"
+                        name="nombre"
+                        value={ nombre }
+                        onChange={ handleChange }
+                        onBlur={ handleBlur }
                       />
+                      { errores.nombre && <Error>  { errores.nombre }</Error> }
                     </div>
+
                     <div className="flex flex-col">
                       <label className="py-2 text-sm uppercase">
                         Phone Number
                       </label>
                       <input
-                        onChange={ (e) => setNumber(e.target.value) }
-                        className="flex p-3 border-2 border-gray-300 rounded-lg"
+                        className={ errores.numero ? "flex p-3 text-black border-2 border-gray-300 rounded-lg border-b-red-700 outline-none" : " outline-none flex p-3 text-black border-2 border-gray-300 rounded-lg " }
                         type="text"
-                        name="phone"
+                        id="numero"
+                        name="numero"
+                        value={ numero }
+                        onChange={ handleChange }
+                        onBlur={ handleBlur }
                       />
+                      { errores.numero && <Error>  { errores.numero }</Error> }
                     </div>
+                  </div>
+                  <div className="flex flex-col py-2">
+                    <input
+                      className={ errores.asunto ? "flex p-3 text-black border-2 border-gray-300 rounded-lg border-b-red-700 outline-none" : " outline-none flex p-3 text-black border-2 border-gray-300 rounded-lg " }
+                      type="text"
+                      id="asunto"
+                      name="asunto"
+                      value={ asunto }
+                      onChange={ handleChange }
+                      onBlur={ handleBlur }
+                    />
+                    { errores.asunto && <Error>  { errores.asunto }</Error> }
+
                   </div>
                   <div className="flex flex-col py-2">
                     <label className="py-2 text-sm uppercase">Email</label>
                     <input
-                      onChange={ (e) => setEmail(e.target.value) }
-                      className="flex p-3 border-2 border-gray-300 rounded-lg"
-                      type="email"
-                      name="email"
-                    />
-                  </div>
-                  <div className="flex flex-col py-2">
-                    <label className="py-2 text-sm uppercase">Subject</label>
-                    <input
-                      onChange={ (e) => setSubject(e.target.value) }
-                      className="flex p-3 border-2 border-gray-300 rounded-lg"
+                      className={ errores.email ? "flex p-3 text-black border-2 border-gray-300 rounded-lg border-b-red-700 outline-none" : " outline-none flex p-3 text-black border-2 border-gray-300 rounded-lg " }
                       type="text"
-                      name="subject"
+                      id="email"
+                      name="email"
+                      value={ email }
+                      onChange={ handleChange }
+                      onBlur={ handleBlur }
                     />
+                    { errores.email && <Error>  { errores.email }</Error> }
                   </div>
                   <div className="flex flex-col py-2">
                     <label className="py-2 text-sm uppercase">Message</label>
                     <textarea
-                      className="p-3 border-2 border-gray-300 rounded-lg"
-                      onChange={ (e) => setMensagge(e.target.value) }
+                      className={ errores.mensaje ? "flex p-3 text-black border-2 border-gray-300 rounded-lg border-b-red-700 outline-none" : " outline-none flex p-3 text-black border-2 border-gray-300 rounded-lg " }
                       rows="10"
-                      name="message"
+                      type="text"
+                      id="mensaje"
+                      name="mensaje"
+                      value={ mensaje }
+                      onChange={ handleChange }
+                      onBlur={ handleBlur }
                     ></textarea>
+                    { errores.mensaje && <Error>  { errores.mensaje }</Error> }
                   </div>
                   <button
                     type="submit"

@@ -24,27 +24,23 @@ const Restaurante = () => {
 
       <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8 text-white'>
         <div className='col-span-4'>
-          <p>Project</p>
-          <h2>Overview</h2>
+          <h2 className='py-4'>Projecto</h2>
           <p>
-            This app was built using React JS and is hosted on Firebase. Users
-            are able to search properties based on an Address, City, or ZIP code
-            to retrieve a list of active properties currently for sale. You will
-            be able to view property information as well as the specific
-            location of the property integrated with the Google Maps API. User
-            authentication is available so you can signup and signin to your
-            account with an email address in order to save your favorite
-            properties. This is made possible with Zillow API.
+            Esta es una aplicación web creada con React Js, Tailwind css y Firebase para permitir a los usuarios hacer pedidos de productos en un restaurante online. La aplicación tiene una interfaz rresponsiva, intuitiva y fácil de usar que permite a los clientes seleccionar sus productos favoritos y realizar su compra.
+
+            <h2 className='py-4'>Funcionalidades</h2>
+
+            Los usuarios pueden visualizar los productos disponibles en el restaurante y seleccionar los que deseen para añadirlos a su carrito de compras. Una vez que hayan seleccionado todos los productos deseados, podrán realizar el pago de manera segura y recibir una confirmación del pedido, junto con la información necesaria para el envío de los productos.
           </p>
           <a
-            href=''
+            href='https://github.com/emalopezperez/Restaurante-Online'
             target=''
             rel='noreferrer'
           >
             <button className='px-8 py-2 mt-4 mr-8'>Code</button>
           </a>
           <a
-            href=''
+            href='https://restaurant-onlinea-react.vercel.app/'
             target='_blank'
             rel='noreferrer'
           >
@@ -66,12 +62,6 @@ const Restaurante = () => {
               </p>
               <p className='flex items-center py-2 text-gray-600'>
                 <RiRadioButtonFill className='pr-1' /> Firebase
-              </p>
-              <p className='flex items-center py-2 text-gray-600'>
-                <RiRadioButtonFill className='pr-1' /> Google API
-              </p>
-              <p className='flex items-center py-2 text-gray-600'>
-                <RiRadioButtonFill className='pr-1' /> Zillow API
               </p>
             </div>
           </div>
