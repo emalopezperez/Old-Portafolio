@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Router from 'next/router';
-import useValidacion from "../hooks/useValidation";
+import useValidacion from '../hooks/useValidacion'
 import validarContact from '../validation/ValidationCantact'
 import Error from "../components/errors/Error";
 import { AiOutlineMail } from "react-icons/ai";
