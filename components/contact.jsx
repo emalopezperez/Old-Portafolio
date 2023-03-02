@@ -93,21 +93,22 @@ const Contact = () => {
                     OTROS MEDIOS de comunicacion:
                   </p>
                   <div className="flex items-center justify-between py-4 mt-6 text-white">
-                    <a href="" target="_blank" rel="noreferrer">
+                    <a href="https://www.linkedin.com/in/emanuel-lopez-developer/" target="_blank" rel="noreferrer">
                       <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110">
                         <FaLinkedinIn className="text-red-200" />
                       </div>
                     </a>
-                    <a href="" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/emalopezperez" target="_blank" rel="noreferrer">
                       <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110">
                         <FaGithub className="text-red-200" />
                       </div>
                     </a>
-
-                    <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110">
-                      <AiOutlineMail className="text-red-200" />
-                    </div>
-                    <Link href="/">
+                    <Link href='mailto:emanuel-lopez13@hotmail.com'>
+                      <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110">
+                        <AiOutlineMail className="text-red-200" />
+                      </div>
+                    </Link>
+                    <Link href="https://wa.link/zlkyij">
                       <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110">
                         <BsFillPersonLinesFill className="text-red-200" />
                       </div>

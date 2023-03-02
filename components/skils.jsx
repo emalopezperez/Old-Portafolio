@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   SiTailwindcss,
   SiFirebase,
@@ -14,7 +15,7 @@ const Skils = () => {
   return (
 
     <div id="skills" className="w-full ">
-      <div className="max-w-[1200px] mx-4 md:mx-auto flex flex-col justify-center h-full shadow-base shadow-white group hover:bg-gradient-to-r ">
+      <Link href="https://www.linkedin.com/in/emanuel-lopez-developer/details/certifications/" className="max-w-[1200px] mx-4 md:mx-auto flex flex-col justify-center h-full shadow-base shadow-white group hover:bg-gradient-to-r ">
         <motion.div
           className=""
           initial="hidden"
@@ -111,7 +112,7 @@ const Skils = () => {
             </div>
           </div>
         </motion.div>
-      </div>
+      </Link>
     </div>
   );
 };

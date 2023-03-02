@@ -52,7 +52,7 @@ const Main = () => {
           >
             <div className='flex items-center justify-between max-w-[330px] m-auto py-9 text-white mt-4'>
               <a
-                href=''
+                href='https://www.linkedin.com/in/emanuel-lopez-developer/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -61,7 +61,7 @@ const Main = () => {
                 </div>
               </a>
               <a
-                href=''
+                href='https://github.com/emalopezperez'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -69,12 +69,12 @@ const Main = () => {
                   <FaGithub size={ 22 } className="text-red-200" />
                 </div>
               </a>
-              <Link href="/#contact">
+              <Link href="mailto:emanuel-lopez13@hotmail.com">
                 <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer boton shadow-gray-600 hover:scale-110">
                   <AiOutlineMail size={ 22 } className="text-red-200" />
                 </div>
               </Link>
-              <Link href='/resume'>
+              <Link href='https://wa.link/zlkyij'>
                 <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110'>
                   <BsFillPersonLinesFill size={ 22 } className="text-red-200" />
                 </div>
