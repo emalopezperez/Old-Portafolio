@@ -1,11 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import robot from "../public/assets/logos/robot.png";
-import { motion } from "framer-motion";
 
 const About = () => {
   return (
-      <div className="flex items-center w-full p-2 py-16 mx-4 md:mx-auto">
+      <div id="about" className="flex items-center w-full p-2 py-16 mx-4 md:mx-auto">
         <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
           <div className="col-span-2">
             <h2 className="py-4 font-poppins font-semibold  text-3xl sm:text-4xl md:text-5xl text-red-300 ss:leading-[100.8px] leading-[75px]">Sobre mi</h2>

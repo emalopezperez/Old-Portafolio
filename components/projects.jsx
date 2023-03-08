@@ -8,6 +8,7 @@ import agenda from '../public/assets/projects/agenda.png'
 import food from '../public/assets/projects/food.png'
 import ProjectItem from './projectItem';
 import { motion } from 'framer-motion';
+import Link from 'next/link'
 
 const Projects = () => {
   const [activity, setActivity] = useState(false)
@@ -15,6 +16,7 @@ const Projects = () => {
   function onSubmit() {
     setActivity(!activity)
   }
+
   return (
     <div id='projects' className='w-full '>
       <div className='max-w-[1200px] mx-4 md:mx-auto px-2 py-16'>
@@ -99,24 +101,50 @@ const Projects = () => {
           </motion.div>
           {
             activity ? <>
-              <ProjectItem
-                title='E-commerce Informatica'
-                backgroundImg={ informatica }
-                projectUrl='/proyects/informatica'
-                tech='React.js'
-              />
-              <ProjectItem
-                title='Planificador de Gastos'
-                backgroundImg={ gastos }
-                projectUrl='/proyects/gestor_de_gastos'
-                tech='React.js'
-              />
+              <motion.div
+                className=""
+                initial="hidden"
+                whileInView="visible"
+                viewport={ { once: true, amount: 0.5 } }
+                transition={ { delay: 0.2, duration: 0.5 } }
+                variants={ {
+                  hidden: { opacity: 0, y: -50 },
+                  visible: { opacity: 1, y: 0 },
+                } }
+              >
+                <ProjectItem
+                  title='E-commerce Informatica'
+                  backgroundImg={ informatica }
+                  projectUrl='/proyects/informatica'
+                  tech='React.js'
+                />
+              </motion.div>
+
+              <motion.div
+                className=""
+                initial="hidden"
+                whileInView="visible"
+                viewport={ { once: true, amount: 0.5 } }
+                transition={ { delay: 0.2, duration: 0.5 } }
+                variants={ {
+                  hidden: { opacity: 0, y: -50 },
+                  visible: { opacity: 1, y: 0 },
+                } }
+              >
+                <ProjectItem
+                  title='Planificador de Gastos'
+                  backgroundImg={ gastos }
+                  projectUrl='/proyects/gestor_de_gastos'
+                  tech='React.js'
+                />
+              </motion.div>
               <ProjectItem
                 title='Agenda'
                 backgroundImg={ agenda }
                 projectUrl='/proyects/agenda'
                 tech='React.js'
               />
+
             </>
               : ""
           }
@@ -136,9 +164,9 @@ const Projects = () => {
       >
         <div className="flex justify-center mb-10 ">
           {
-            activity ? <p onClick={ onSubmit } className="flex justify-center duration-300 ease-in items-center w-[150px] py-1 text-lg text-center text-red-200 bg-black rounded-md px-4 cursor-pointer shadow-md  shadow-white hover:scale-110">
+            activity ? <Link href="/#projects"> <p onClick={ onSubmit } className="flex justify-center duration-300 ease-in items-center w-[150px] py-1 text-lg text-center text-red-200 bg-black rounded-md px-4 cursor-pointer shadow-md  shadow-white hover:scale-110">
               Close x
-            </p> :
+            </p></Link> :
               <p onClick={ onSubmit } className="flex duration-300 ease-in items-center w-[150px] py-1 text-lg text-center text-red-200 bg-black rounded-md px-4 cursor-pointer shadow-md  shadow-white hover:scale-110">
                 Ver mas
                 <svg
