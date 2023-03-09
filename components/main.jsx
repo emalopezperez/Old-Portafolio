@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 const Main = () => {
   return (
-    <div className='h-screen mt-12 text-center md:mt-0 '>
+    <div className='h-screen mt-8 text-center md:mt-0 '>
       <div className='max-w-[1200px] h-full mx-8 md:mx-auto p-2 flex justify-center items-center shadow-base shadow-white group hover:bg-gradient-to-r'>
         <div>
           <div className='pb-3 text-[10px] md:text-sm tracking-widest text-white uppercase'>
@@ -59,7 +59,7 @@ const Main = () => {
                 rel='noreferrer'
               >
                 <div className='p-6 duration-300 ease-in rounded-full shadow-md cursor-pointer md:shadow-lg hover:scale-90 shadow-gray-600 md:shadow-gray-600 md:hover:scale-110'>
-                  <FaLinkedinIn className="text-red-200 text-md md:text-xl" />
+                  <FaLinkedinIn className="text-xl text-red-200" />
                 </div>
               </a>
               <a
@@ -68,17 +68,17 @@ const Main = () => {
                 rel='noreferrer'
               >
                 <div className='p-6 duration-300 ease-in rounded-full shadow-md cursor-pointer md:shadow-lg hover:scale-90 shadow-gray-600 md:shadow-gray-600 md:hover:scale-110'>
-                  <FaGithub className="text-red-200 text-md md:text-xl" />
+                  <FaGithub className="text-xl text-red-200" />
                 </div>
               </a>
               <Link href="mailto:emanuel-lopez13@hotmail.com">
                 <div className="p-6 duration-300 ease-in rounded-full shadow-md cursor-pointer md:shadow-lg hover:scale-90 shadow-gray-600 md:shadow-gray-600 md:hover:scale-110'">
-                  <AiOutlineMail className="text-red-200 text-md md:text-xl" />
+                  <AiOutlineMail className="text-xl text-red-200" />
                 </div>
               </Link>
               <Link href='https://wa.link/zlkyij'>
                 <div className='p-6 duration-300 ease-in rounded-full shadow-md cursor-pointer md:shadow-lg hover:scale-90 shadow-gray-600 md:shadow-gray-600 md:hover:scale-110'>
-                  <BsFillPersonLinesFill className="text-red-200 text-md md:text-xl" />
+                  <BsFillPersonLinesFill className="text-xl text-red-200" />
                 </div>
               </Link>
             </div>
