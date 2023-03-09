@@ -1,23 +1,25 @@
 import Link from 'next/link';
 import React from 'react';
-import { AiOutlineMail} from 'react-icons/ai';
+import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import Typewriter from 'typewriter-effect';
+import { Typewriter } from 'react-simple-typewriter'
 import { motion } from 'framer-motion';
 
 const Main = () => {
   return (
-    <div className='h-screen mt-0 text-center '>
+    <div className='h-screen mt-12 text-center md:mt-0 '>
       <div className='max-w-[1200px] h-full mx-8 md:mx-auto p-2 flex justify-center items-center shadow-base shadow-white group hover:bg-gradient-to-r'>
         <div>
-          <div className='pb-3 text-[11px] md:text-sm tracking-widest text-white uppercase'>
+          <div className='pb-3 text-[10px] md:text-sm tracking-widest text-white uppercase'>
             <Typewriter
-              options={ {
-                strings: ['Construyamos jUNTOS...'],
-                autoStart: true,
-                loop: true
-              } }
+              words={ ['Construyamos juntos...'] }
+              loop={ 0 }
+              cursor
+              cursorStyle="_"
+              typeSpeed={ 120 }
+              deleteSpeed={ 50 }
+              delaySpeed={ 1000 }
             />
           </div>
           <motion.div
@@ -38,8 +40,8 @@ const Main = () => {
             <p className='pt-6  sm:max-w-[70%] m-auto  text-sm md:text-lg text-white'>
               Me especializo en la creación de sitios y aplicaciones web con diseño responsivo, lo que permite que se adapten a diferentes dispositivos y asegura una experiencia óptima para el usuario.
             </p>
-            </motion.div>
-            <motion.div
+          </motion.div>
+          <motion.div
             className=""
             initial="hidden"
             whileInView="visible"
@@ -56,8 +58,8 @@ const Main = () => {
                 target='_blank'
                 rel='noreferrer'
               >
-                <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110'>
-                  <FaLinkedinIn size={ 22 } className="text-red-200 " />
+                <div className='p-6 duration-300 ease-in rounded-full shadow-md cursor-pointer md:shadow-lg hover:scale-90 shadow-gray-600 md:shadow-gray-600 md:hover:scale-110'>
+                  <FaLinkedinIn className="text-red-200 text-md md:text-xl" />
                 </div>
               </a>
               <a
@@ -65,23 +67,22 @@ const Main = () => {
                 target='_blank'
                 rel='noreferrer'
               >
-                <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110'>
-                  <FaGithub size={ 22 } className="text-red-200" />
+                <div className='p-6 duration-300 ease-in rounded-full shadow-md cursor-pointer md:shadow-lg hover:scale-90 shadow-gray-600 md:shadow-gray-600 md:hover:scale-110'>
+                  <FaGithub className="text-red-200 text-md md:text-xl" />
                 </div>
               </a>
               <Link href="mailto:emanuel-lopez13@hotmail.com">
-                <div className="p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer boton shadow-gray-600 hover:scale-110">
-                  <AiOutlineMail size={ 22 } className="text-red-200" />
+                <div className="p-6 duration-300 ease-in rounded-full shadow-md cursor-pointer md:shadow-lg hover:scale-90 shadow-gray-600 md:shadow-gray-600 md:hover:scale-110'">
+                  <AiOutlineMail className="text-red-200 text-md md:text-xl" />
                 </div>
               </Link>
               <Link href='https://wa.link/zlkyij'>
-                <div className='p-6 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-600 hover:scale-110'>
-                  <BsFillPersonLinesFill size={ 22 } className="text-red-200" />
+                <div className='p-6 duration-300 ease-in rounded-full shadow-md cursor-pointer md:shadow-lg hover:scale-90 shadow-gray-600 md:shadow-gray-600 md:hover:scale-110'>
+                  <BsFillPersonLinesFill className="text-red-200 text-md md:text-xl" />
                 </div>
               </Link>
             </div>
-            </motion.div>
-          
+          </motion.div>
         </div>
       </div>
     </div>

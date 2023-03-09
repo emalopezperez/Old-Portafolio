@@ -13,9 +13,8 @@ import {
 
 const Skils = () => {
   return (
-
-    <div id="skills" className="w-full ">
-      <Link href="https://www.linkedin.com/in/emanuel-lopez-developer/details/certifications/" className="max-w-[1200px] mx-4 md:mx-auto flex flex-col justify-center h-full shadow-base shadow-white group hover:bg-gradient-to-r ">
+    <div id="skills" className="w-full">
+      <Link href="https://www.linkedin.com/in/emanuel-lopez-developer/details/certifications/" className="max-w-[1100px] mx-2 md:mx-auto flex flex-col justify-center h-full shadow-base shadow-white group hover:bg-gradient-to-r ">
         <motion.div
           className=""
           initial="hidden"

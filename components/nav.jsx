@@ -149,7 +149,7 @@ const Nav = () => {
       <div className="flex justify-between text-black aling-center lg:hidden sm:flex-nowrap">
         <div id="title-color-mobil" className="">
           <Link href="/" className="">
-            <h1 className="text-[20px] md:text-2xl ">Portafolio</h1>
+            <h1 className="text-[20px] md:text-2xl text-white">Portafolio</h1>
           </Link>
         </div>
         <button

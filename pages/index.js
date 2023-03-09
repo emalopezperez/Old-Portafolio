@@ -8,7 +8,7 @@ import Skils from "../components/skils"
 
 export default function Home() {
   return (
-    <div>
+    <div className=''>
       <Head>
         <title>Portafolio Emanuel Lopez</title>
         <meta
@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/fav.png" />
       </Head>
       <Nav/>
-      <div className='mt-[26px]'>
+      <div className='mt-[26px] '>
       <Main/>
       </div>
       <About/>
