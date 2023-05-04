@@ -34,3 +34,7 @@ html {
     @apply shadow-xl shadow-gray-800 rounded-xl  text-white
   }
 }
+
+.font_titulos{
+  font-family: 'Nunito Sans', sans-serif;
+}

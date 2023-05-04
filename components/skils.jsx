@@ -26,7 +26,10 @@ const Skils = () => {
             visible: { opacity: 1, y: 0 },
           } }
         >
-          <h2 className="py-4 font-poppins font-semibold  text-3xl sm:text-4xl md:text-5xl text-red-300 ss:leading-[100.8px] leading-[75px] mb-4">Tecnologias</h2>
+        <header className="flex justify-center mt-2 mb-3 md:mt-8 md:mb-12">
+        <h2 className="py-4 mb-4 text-3xl font-semibold text-red-300 font-poppins sm:text-4xl md:text-5xl">Tecnologias</h2>
+        </header>
+          
           <div className="grid grid-cols-2 gap-8 text-white cursor-pointer lg:grid-cols-4 ">
             <div className="p-6 duration-300 ease-in shadow-xl rounded-xl hover:scale-105 hover:text-red-500">
               <div className="grid items-center justify-center grid-cols-2 gap-4">

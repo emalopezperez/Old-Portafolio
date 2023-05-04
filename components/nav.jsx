@@ -46,17 +46,17 @@ const Nav = () => {
       data-scroll-id="hey"
       className="fixed top-0 z-40 w-full px-20 py-4 transition duration-300 ease-in-out shadow-navbar ">
       <div className="px-4 sm:px-6">
-        <div className="flex-wrap items-center justify-between hidden px-2 -mt-2 -ml-4 lg:flex sm:flex-nowrap md:px-14">
+        <div className="flex-wrap items-center justify-between hidden px-2 -mt-2 -ml-4 lg:flex sm:flex-nowrap md:px-14 ">
           <div>
             <Link
               id="title-color"
               href="/"
-              className="inline-flex mx-4 mt-2 text-2xl font-bold leading-6 text-red-300 transition duration-300 ease-in-out hover:border-white-900 ">
+              className="inline-flex mx-4 mt-2 text-2xl font-bold leading-6 text-gray-200 transition duration-300 ease-in-out hover:border-white-900 font_titulos hover:text-red-300">
               Portafolio
             </Link>
           </div>
 
-          <div id="text-color" className="flex-shrink-0 mt-2 ml-4 text-sm text-red-200 uppercase">
+          <div id="text-color" className="flex-shrink-0 mt-2 ml-4 text-sm text-red-200 font_titulos">
             <Link
               href="/"
               className="inline-flex mx-4 font-semibold transition duration-300 ease-in-out eading-6 hover:text-white">
