@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Nav from '../components/nav';
-import Main from '../components/main';
-import About from '../components/about';
-import Projects from '../components/projects';
-import Contact from '../components/contact';
-import Skils from "../components/skils"
+import Nav from '../components/presentational/header/nav';
+import Main from '../components/presentational/mainContent/main';
+import About from '../components/presentational/about';
+import Projects from '../components/presentational/projects';
+import Contact from '../components/presentational/contact';
+import Skils from '../components/presentational/skils';
 
 export default function Home() {
   return (

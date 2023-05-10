@@ -1,11 +1,11 @@
 import { useState } from "react";
-import netflixImg from "../public/assets/projects/netflix.png";
-import airbnb from "../public/assets/projects/airbnb.png";
-import ecommerce from "../public/assets/projects/guitar.png";
-import gastos from "../public/assets/projects/gastos.png";
-import informatica from "../public/assets/projects/informatica.png";
-import agenda from "../public/assets/projects/agenda.png";
-import food from "../public/assets/projects/food.png";
+import netflixImg from "../../public/assets/projects/netflix.png";
+import airbnb from "../../public/assets/projects/airbnb.png";
+import ecommerce from "../../public/assets/projects/guitar.png";
+import gastos from "../../public/assets/projects/gastos.png";
+import informatica from "../../public/assets/projects/informatica.png";
+import agenda from "../../public/assets/projects/agenda.png";
+import food from "../../public/assets/projects/food.png";
 import ProjectItem from "./projectItem";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -27,75 +27,34 @@ const Projects = () => {
         </header>
 
         <div className="grid gap-8 md:grid-cols-2">
-          <motion.div
-            className=""
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: -50 },
-              visible: { opacity: 1, y: 0 },
-            }}>
-            <ProjectItem
-              title="Netflix App"
-              backgroundImg={netflixImg}
-              projectUrl="/proyects/netflix_clone"
-              tech="React.js"
-            />
-          </motion.div>
-          <motion.div
-            className=""
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: -50 },
-              visible: { opacity: 1, y: 0 },
-            }}>
-            <ProjectItem
-              title="E-commerce Guitar"
-              backgroundImg={ecommerce}
-              projectUrl="/proyects/ecommerce_guitar"
-              tech="Next.js"
-            />
-          </motion.div>
-          <motion.div
-            className=""
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: -50 },
-              visible: { opacity: 1, y: 0 },
-            }}>
-            <ProjectItem
-              title="Restaurante Onlinea"
-              backgroundImg={food}
-              projectUrl="/proyects/restaurante"
-              tech="React.js"
-            />
-          </motion.div>
+          <ProjectItem
+            title="Netflix App"
+            backgroundImg={netflixImg}
+            projectUrl="/proyects/netflix_clone"
+            tech="React.js"
+          />
 
-          <motion.div
-            className=""
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: -50 },
-              visible: { opacity: 1, y: 0 },
-            }}>
-            <ProjectItem
-              title="Clone Airbnb"
-              backgroundImg={airbnb}
-              projectUrl="/proyects/airbnb_clone"
-              tech="Next.js"
-            />
-          </motion.div>
+          <ProjectItem
+            title="E-commerce Guitar"
+            backgroundImg={ecommerce}
+            projectUrl="/proyects/ecommerce_guitar"
+            tech="Next.js"
+          />
+
+          <ProjectItem
+            title="Restaurante Onlinea"
+            backgroundImg={food}
+            projectUrl="/proyects/restaurante"
+            tech="React.js"
+          />
+
+          <ProjectItem
+            title="Clone Airbnb"
+            backgroundImg={airbnb}
+            projectUrl="/proyects/airbnb_clone"
+            tech="Next.js"
+          />
+
           {activity ? (
             <>
               <motion.div

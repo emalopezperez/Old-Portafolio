@@ -52,7 +52,7 @@ const Nav = () => {
               id="title-color"
               href="/"
               className="inline-flex mx-4 mt-2 text-2xl font-bold leading-6 text-gray-200 transition duration-300 ease-in-out hover:border-white-900 font_titulos hover:text-red-300">
-              Portafolio
+              Emanuel Lopez
             </Link>
           </div>
 
@@ -149,7 +149,7 @@ const Nav = () => {
       <div className="flex justify-between text-black aling-center lg:hidden sm:flex-nowrap">
         <div id="title-color-mobil" className="">
           <Link href="/" className="">
-            <h1 className="text-[20px] md:text-2xl text-white">Portafolio</h1>
+            <h1 className="text-[20px] md:text-2xl text-white">Emanuel Lopez</h1>
           </Link>
         </div>
         <button

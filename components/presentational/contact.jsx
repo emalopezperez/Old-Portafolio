@@ -1,14 +1,14 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Router from "next/router";
-import useValidacion from "../hooks/useValidacion";
-import validarContact from "../validation/ValidationCantact";
-import Error from "../components/errors/Error";
+import useValidacion from "../../hooks/useValidacion";
+import validarContact from "../../validation/ValidationCantact";
+import Error from "../errors/Error";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
-import { db } from "../firebase/firebase";
+import { db } from "../../firebase/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import toast, { Toaster } from "react-hot-toast";
 import { motion } from "framer-motion";
@@ -232,6 +232,7 @@ const Contact = () => {
                       onBlur={handleBlur}></textarea>
                     {errores.mensaje && <Error> {errores.mensaje}</Error>}
                   </div>
+
                   <button
                     type="submit"
                     className="w-full p-4 mt-4 font-bold text-black bg-red-300">

@@ -8,6 +8,7 @@ const ProjectItem = ({ title, backgroundImg, tech, projectUrl}) => {
   useEffect(() => {
     AOS.init();
   }, []);
+  
   return (
     <div
       className="relative flex items-center justify-center w-full h-auto shadow-md bg-black/10 shadow-white rounded-xl group hover:bg-gradient-to-r"
