@@ -18,10 +18,10 @@ const Projects = () => {
   }
 
   return (
-    <div id="projects" className="w-full ">
+    <div id="projects" className="w-screen h:h-[50%] md:h-full">
       <div className="max-w-[1200px] mx-4 md:mx-auto px-2 py-16">
-        <header className="flex justify-center mt-2 mb-3 md:mt-8 md:mb-12">
-          <p className="py-6 pb-10 text-3xl font-semibold text-red-300 font-poppins sm:text-4xl md:text-5xl ">
+        <header className="flex justify-center pb-0 mt-2 md:pb-10 md:mt-8 md:mb-12">
+          <p className="py-6 pb-10 text-3xl font-semibold text-white font-poppins sm:text-4xl md:text-5xl ">
             Projectos
           </p>
         </header>
@@ -114,20 +114,20 @@ const Projects = () => {
           hidden: { opacity: 0, y: -50 },
           visible: { opacity: 1, y: 0 },
         }}>
-        <div className="flex justify-center mb-10 ">
+        <div className="flex justify-center mt-5">
           {activity ? (
             <Link href="/#projects">
               {" "}
               <p
                 onClick={onSubmit}
-                className="flex justify-center duration-300 ease-in items-center w-[150px] py-1 text-lg text-center text-red-200 bg-black rounded-md px-4 cursor-pointer shadow-md  shadow-white hover:scale-110">
+                className="flex justify-center duration-300 ease-in items-center w-[150px] py-1 text-lg text-center text-white bg-black rounded-md px-4 cursor-pointer shadow-md  shadow-white hover:scale-110">
                 Close x
               </p>
             </Link>
           ) : (
             <p
               onClick={onSubmit}
-              className="flex duration-300 ease-in items-center w-[150px] py-1 text-lg text-center text-red-200 bg-black rounded-md px-4 cursor-pointer shadow-md  shadow-white hover:scale-110">
+              className="flex duration-300 ease-in items-center w-[150px] py-1 text-lg text-center text-white bg-black rounded-md px-4 cursor-pointer shadow-md  shadow-white hover:scale-110">
               Ver mas
               <svg
                 xmlns="http://www.w3.org/2000/svg"
